@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100..900&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Interactive rating component</title>
+    <link href="./message.css" rel="stylesheet" />
+  </head>
+
+  <body class="page">
+    <main class="main">
+      <div class="wrapper">
+        <div class="box--media">
+          <img class="box--media__img" src="./images/illustration-thank-you.svg" alt="" width="162" height="108" />
+        </div>
+        <div class="box--intro">
+          <span class="box--intro__inline"></span>
+        </div>
+        <div class="box--content">
+          <h1 class="box--content__title">Thank you!</h1>
+          <p class="box--content__text">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p> 
+        </div>
+        <div class="box--aside">
+          <a class="box--aside__link" href="./index.html">Back to main page</a>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const feedbackSpan = document.querySelector(".box--intro__inline");
+      const urlParams = new URLSearchParams(window.location.search);
+      const feedbackScore = urlParams.get("feedback");
+      feedbackSpan.textContent = `You selected ${feedbackScore} out of 5`; 
+    </script>
+  </body>
+</html>

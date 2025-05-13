@@ -1,0 +1,169 @@
+:root {
+  --color-off-white: hsl(0, 100%, 100%);
+  --color-primary: hsl(25, 97%, 53%);
+  --color-950: hsl(216, 12%, 8%);
+  --color-900: hsl(213, 19%, 18%);
+  --color-850: hsl(210, 26%, 28%);
+  --color-500: hsl(217, 12%, 63%);
+  --bg-primary: hsl(25, 97%, 53%);
+  --bg-off-white: hsl(0, 100%, 100%);
+  --bg-950: hsl(216, 12%, 8%);
+  --bg-900: hsl(213, 19%, 18%);
+  --bg-850: hsl(210, 26%, 28%);
+  --bg-500: hsl(217, 12%, 63%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+}
+
+img,
+picture,
+svg {
+  block-size: auto;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+.page {
+  font-family: "Overpass", sans-serif;
+  font-size: 0.875rem;
+  color: var(--color-off-white);
+  background-color: var(--bg-950);
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.main {
+  background-color: var(--bg-900);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.wrapper {
+  background-color: inherit;
+  max-width: 20.5rem;
+  padding: 2rem 1.8rem;
+}
+
+.box--media {
+  display: flex;
+  justify-content: center;
+}
+
+.box--intro {
+  display: grid;
+  place-content: center;
+  margin-top: 1.5rem;
+}
+
+.box--intro__inline {
+  background-color: var(--bg-850);
+  color: var(--bg-primary);
+  padding: .3rem .5rem;
+  border-radius: 20px;
+}
+
+.box--content {
+  margin-top: 1.5rem;
+}
+
+.box--content__title {
+  font-size: 1.5rem;
+}
+
+.box--content__text {
+  margin-top: .5rem;
+}
+
+.box--aside {
+  margin-top: .5rem;
+}
+
+.box--aside__link {
+  color: var(--color-primary);
+}
+
+@media (min-width: 64rem) {
+  .page {
+    font-size: 0.9375rem;
+  }
+
+  .wrapper {
+    max-width: 26rem;
+    padding: 2.8rem 2.3rem;
+    gap: 2rem;
+  }
+
+  .box--intro__inline {
+    padding-inline: 1.2rem;
+  }
+
+  .box--content__title {
+    font-size: 1.75rem;
+  }
+}
